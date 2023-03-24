@@ -1,6 +1,6 @@
 module.exports = {
   content: ['./*.html'],
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
   screens: {
     sm: '480px',
     md: '768px',
