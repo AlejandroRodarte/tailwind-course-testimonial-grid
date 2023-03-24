@@ -16,11 +16,16 @@
   <body class="bg-gray-200">
     <!-- Global Container -->
     <div class="container mx-auto max-w-7xl p-2 md:p-10">
-      <!-- Grid Container - TODO: Implement grid display -->
-      <div class="text-white">
+      <!-- Grid Container -->
+      <!-- 1. on mobile screens, have only one explicit column -->
+      <!-- 2. on medium and larger screens, have four explicit columns and two explicit rows -->
+      <div
+        class="grid grid-cols-1 gap-6 text-white md:grid-cols-4 md:grid-rows-2"
+      >
         <!-- Box 1 -->
         <!-- 1. relative since the "quotes" svg icon will be absolute-positioned -->
-        <div class="relative rounded-xl bg-purple-700 p-10">
+        <!-- 2. this box will span two columns and one row -->
+        <div class="relative rounded-xl bg-purple-700 p-10 md:col-span-2">
           <!-- "Quotes" Image -->
           <img
             src="images/bg-pattern-quotation.svg"
@@ -88,7 +93,10 @@
         <!-- 1. on medium and larger screens, this will be the THIRD item -->
         <!-- 2. on mobile though, it will be the LAST item -->
         <!-- 3. this third box will be hidden for mobile -->
-        <div class="hidden rounded-xl bg-white p-10 text-gray-900">
+        <!-- 4. appears on medium screens and will span two rows and one column -->
+        <div
+          class="hidden rounded-xl bg-white p-10 text-gray-900 md:row-span-2 md:block"
+        >
           <div class="flex space-x-4">
             <img
               src="images/image-kira.jpg"
@@ -140,7 +148,8 @@
           </p>
         </div>
         <!-- Box 5 -->
-        <div class="rounded-xl bg-gray-900 p-10">
+        <!-- 1. this box will span two columns and one row -->
+        <div class="rounded-xl bg-gray-900 p-10 md:col-span-2">
           <div class="flex space-x-4">
             <img
               src="images/image-patrick.jpg"
@@ -168,7 +177,7 @@
         </div>
         <!-- Box 6 (same content as Box 3) -->
         <!-- 1. this appears only on mobile screens as the LAST item -->
-        <div class="rounded-xl bg-white p-10 text-gray-900">
+        <div class="rounded-xl bg-white p-10 text-gray-900 md:hidden">
           <div class="flex space-x-4">
             <img
               src="images/image-kira.jpg"
